@@ -1,0 +1,109 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://bomba.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/3-Explotion/1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/3-Explotion/2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/3-Explotion/3.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/3-Explotion/4.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/3-Explotion/5.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/3-Explotion/6.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/3-Explotion/7.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/3-Explotion/8.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/3-Explotion/9.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/2-Bomb On/1.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/2-Bomb On/2.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/2-Bomb On/3.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/2-Bomb On/4.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/2-Bomb On/5.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/2-Bomb On/6.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/2-Bomb On/7.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/2-Bomb On/8.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/2-Bomb On/9.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/2-Bomb On/10.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/7-Objects/1-BOMB/1-Bomb Off/1.png" type="Texture" id=21]
+
+[sub_resource type="PhysicsMaterial" id=1]
+bounce = 0.2
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": false,
+"name": "explota",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "encendido",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 21 ) ],
+"loop": true,
+"name": "apagado",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 16, 16 )
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 20.0
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 38.0
+height = 54.0
+
+[node name="bomba" type="RigidBody2D" groups=[
+"bomba",
+]]
+mode = 2
+mass = 20.0
+physics_material_override = SubResource( 1 )
+gravity_scale = 2.0
+continuous_cd = 2
+linear_velocity = Vector2( 0, -100 )
+script = ExtResource( 1 )
+
+[node name="anim" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -20 )
+frames = SubResource( 2 )
+animation = "encendido"
+frame = 8
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 3 )
+
+[node name="detect_click" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detect_click"]
+shape = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="explosion" type="Area2D" parent="."]
+position = Vector2( -1, -20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="explosion"]
+shape = SubResource( 5 )
+disabled = true
+
+[node name="tiempo" type="Label" parent="."]
+margin_left = -21.0
+margin_top = -7.0
+margin_right = 19.0
+margin_bottom = 7.0
+text = "3"
+align = 1
+valign = 1
+[connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
+[connection signal="area_entered" from="detect_click" to="." method="_on_detect_click_area_entered"]
+[connection signal="area_exited" from="detect_click" to="." method="_on_detect_click_area_exited"]
+[connection signal="mouse_entered" from="detect_click" to="." method="_on_detect_click_mouse_entered"]
+[connection signal="mouse_exited" from="detect_click" to="." method="_on_detect_click_mouse_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

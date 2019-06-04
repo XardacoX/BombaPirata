@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sprites/8-Tile-Sets/Tile-Sets (64-64).png" type="Texture" id=1]
+
+[node name="tile_edit_fondo" type="Node2D"]
+
+[node name="00" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 6
+frame = 3
+
+[node name="01" type="Sprite" parent="."]
+position = Vector2( 67, 4 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 6
+frame = 4
+
+[node name="02" type="Sprite" parent="."]
+position = Vector2( 133, 4 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 6
+frame = 5
+
+[node name="03" type="Sprite" parent="."]
+position = Vector2( 4, 76 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 6
+frame = 9
+
+[node name="04" type="Sprite" parent="."]
+position = Vector2( 72, 72 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 6
+frame = 10
+
+[node name="05" type="Sprite" parent="."]
+position = Vector2( 142, 71 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 6
+frame = 11
+
+[node name="06" type="Sprite" parent="."]
+position = Vector2( 7, 146 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 6
+frame = 15
+
+[node name="07" type="Sprite" parent="."]
+position = Vector2( 80, 144 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 6
+frame = 16
+
+[node name="08" type="Sprite" parent="."]
+position = Vector2( 150, 145 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 6
+frame = 17

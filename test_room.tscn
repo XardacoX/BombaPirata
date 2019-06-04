@@ -1,0 +1,141 @@
+[gd_scene load_steps=60 format=2]
+
+[ext_resource path="res://fondo_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://jugador.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/2-Run/1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/2-Run/2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/2-Run/3.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/2-Run/4.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/2-Run/5.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/2-Run/6.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/2-Run/7.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/2-Run/8.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/2-Run/9.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/2-Run/10.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/2-Run/11.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/2-Run/12.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/2-Run/13.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/2-Run/14.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/7-Hit/1.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/7-Hit/2.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/7-Hit/3.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/7-Hit/4.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/7-Hit/5.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/7-Hit/6.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/7-Hit/7.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/5-Fall/1.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/5-Fall/2.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/1.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/2.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/3.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/4.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/5.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/6.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/7.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/8.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/9.png" type="Texture" id=35]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/10.png" type="Texture" id=36]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/11.png" type="Texture" id=37]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/12.png" type="Texture" id=38]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/13.png" type="Texture" id=39]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/14.png" type="Texture" id=40]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/15.png" type="Texture" id=41]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/16.png" type="Texture" id=42]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/17.png" type="Texture" id=43]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/18.png" type="Texture" id=44]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/19.png" type="Texture" id=45]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/20.png" type="Texture" id=46]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/21.png" type="Texture" id=47]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/22.png" type="Texture" id=48]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/23.png" type="Texture" id=49]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/24.png" type="Texture" id=50]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/25.png" type="Texture" id=51]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/1-Idle/26.png" type="Texture" id=52]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/4-Jump/1.png" type="Texture" id=53]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/4-Jump/2.png" type="Texture" id=54]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/4-Jump/3.png" type="Texture" id=55]
+[ext_resource path="res://Sprites/1-Player-Bomb Guy/4-Jump/4.png" type="Texture" id=56]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "corriendo",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"loop": false,
+"name": "golpeado",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 26 ) ],
+"loop": false,
+"name": "cayendo",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ) ],
+"loop": true,
+"name": "parado",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ) ],
+"loop": false,
+"name": "saltando",
+"speed": 20.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 46, 38 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 15, 24 )
+
+[node name="test_room" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="fondo" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 65537, 0, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65546, 1, 0, 65547, 1, 0, 65548, 1, 0, 65549, 1, 0, 65550, 2, 0, 131073, 3, 0, 131074, 4, 0, 131075, 4, 0, 131076, 4, 0, 131077, 4, 0, 131078, 4, 0, 131079, 4, 0, 131080, 4, 0, 131081, 4, 0, 131082, 4, 0, 131083, 4, 0, 131084, 4, 0, 131085, 4, 0, 131086, 5, 0, 196609, 3, 0, 196610, 4, 0, 196611, 4, 0, 196612, 4, 0, 196613, 4, 0, 196614, 4, 0, 196615, 4, 0, 196616, 4, 0, 196617, 4, 0, 196618, 4, 0, 196619, 4, 0, 196620, 4, 0, 196621, 4, 0, 196622, 5, 0, 262145, 3, 0, 262146, 4, 0, 262147, 4, 0, 262148, 4, 0, 262149, 4, 0, 262150, 4, 0, 262151, 4, 0, 262152, 4, 0, 262153, 4, 0, 262154, 4, 0, 262155, 4, 0, 262156, 4, 0, 262157, 4, 0, 262158, 5, 0, 327681, 3, 0, 327682, 4, 0, 327683, 4, 0, 327684, 4, 0, 327685, 4, 0, 327686, 4, 0, 327687, 4, 0, 327688, 4, 0, 327689, 4, 0, 327690, 4, 0, 327691, 4, 0, 327692, 4, 0, 327693, 4, 0, 327694, 5, 0, 393217, 3, 0, 393218, 4, 0, 393219, 4, 0, 393220, 4, 0, 393221, 4, 0, 393222, 4, 0, 393223, 4, 0, 393224, 4, 0, 393225, 4, 0, 393226, 4, 0, 393227, 4, 0, 393228, 4, 0, 393229, 4, 0, 393230, 5, 0, 458753, 6, 0, 458754, 7, 0, 458755, 7, 0, 458756, 7, 0, 458757, 7, 0, 458758, 7, 0, 458759, 7, 0, 458760, 7, 0, 458761, 7, 0, 458762, 7, 0, 458763, 7, 0, 458764, 7, 0, 458765, 7, 0, 458766, 8, 0 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( 0, 9, 0, 1, 7, 0, 2, 7, 0, 3, 7, 0, 4, 7, 0, 5, 7, 0, 6, 7, 0, 7, 7, 0, 8, 7, 0, 9, 7, 0, 10, 7, 0, 11, 7, 0, 12, 7, 0, 13, 7, 0, 14, 7, 0, 15, 10, 0, 65536, 5, 0, 65551, 3, 0, 131072, 5, 0, 131087, 3, 0, 196608, 5, 0, 196623, 3, 0, 262144, 5, 0, 262159, 3, 0, 327680, 5, 0, 327695, 3, 0, 393216, 5, 0, 393224, 13, 0, 393225, 14, 0, 393226, 15, 0, 393231, 3, 0, 458752, 5, 0, 458758, 13, 0, 458759, 14, 0, 458760, 14, 0, 458761, 14, 0, 458762, 14, 0, 458763, 14, 0, 458764, 15, 0, 458767, 3, 0, 524288, 11, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 524303, 12, 0 )
+
+[node name="jugador" type="KinematicBody2D" parent="." groups=[
+"jugador",
+]]
+position = Vector2( 97, 103 )
+script = ExtResource( 3 )
+
+[node name="anim" type="AnimatedSprite" parent="jugador"]
+frames = SubResource( 1 )
+animation = "golpeado"
+frame = 6
+playing = true
+
+[node name="jugador" type="Area2D" parent="jugador"]
+position = Vector2( 4, 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jugador/jugador"]
+position = Vector2( -3, -17 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jugador"]
+visible = false
+position = Vector2( 5, 4 )
+shape = SubResource( 3 )
+
+[node name="linea" type="Line2D" parent="." groups=[
+"linea",
+]]
+width = 5.0
+default_color = Color( 0.670588, 0.596078, 0.921569, 1 )
+texture_mode = -1981007931
+sharp_limit = 20.0
+round_precision = 18
+[connection signal="area_entered" from="jugador/jugador" to="jugador" method="_on_jugador_area_entered"]
